@@ -15,6 +15,12 @@ const Body = () => {
         console.log(res.data);
         setData(res.data);
       });
+    axios
+      .post(`https://3.91.204.112/api/user/login`, {
+        email: "marcelogarcia91@gmail.com",
+        password: "Demo1234",
+      })
+      .then((res) => console.log(res.data));
   }, []);
 
   return (
